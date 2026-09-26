@@ -140,7 +140,8 @@ Pickle files execute code when loaded; load them only from this repository.
 
 ## Citation
 
-Please cite the thesis and the software repository (see `CITATION.cff` there).
+Please cite the thesis and the software: Sviderski, M. (2026). *acophenotype*.
+Zenodo. https://doi.org/10.5281/zenodo.22980874
 """
 
 

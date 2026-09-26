@@ -1,5 +1,7 @@
 # acophenotype
 
+[![DOI](https://zenodo.org/badge/1389368181.svg)](https://doi.org/10.5281/zenodo.22980874)
+
 **Multi-representation acoustic phenotyping of spontaneous speech, as installable Python
 packages.**
 
@@ -87,7 +89,7 @@ cd voxmarkers && pytest      # and likewise for each package
 ## Citation
 
 If you use this software or the models, please cite the thesis and this repository
-(see [`CITATION.cff`](CITATION.cff); the archived release has a Zenodo DOI).
+(see [`CITATION.cff`](CITATION.cff); DOI [10.5281/zenodo.22980874](https://doi.org/10.5281/zenodo.22980874)).
 
 ## License
 
