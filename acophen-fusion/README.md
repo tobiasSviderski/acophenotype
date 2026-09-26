@@ -3,7 +3,7 @@
 **Fuse acoustic-phenotyping stream vectors into a prediction — with per-stream contributions.**
 
 `acophen-fusion` takes the feature vectors produced by the acoustic streams
-(`biomarkers` from [`voxmarkers`](https://github.com/msvidersky/voxmarkers), plus the
+(`biomarkers` from [`voxmarkers`](https://github.com/tobiasSviderski/acophenotype/tree/main/voxmarkers), plus the
 deep `embeddings`, `emotion`, and `vision` streams) and runs the **frozen** models from
 the thesis to produce a prediction and a breakdown of how much each stream contributed.
 It's built for zero-shot cross-corpus scoring: align an incoming recording to the exact

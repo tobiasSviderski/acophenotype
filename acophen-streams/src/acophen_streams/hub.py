@@ -9,7 +9,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-DEFAULT_REPO_ID = "msvidersky/acophenotype-pitt-models"
+DEFAULT_REPO_ID = "sivdma/acophenotype-pitt-models"
 DEFAULT_REVISION = None
 CODEBOOK_PATH_IN_REPO = "reference/vlad_codebook.pkl"
 

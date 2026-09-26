@@ -30,8 +30,8 @@ pip install voxmarkers
 From source (development):
 
 ```bash
-git clone https://github.com/msvidersky/voxmarkers
-cd voxmarkers
+git clone https://github.com/tobiasSviderski/acophenotype
+cd acophenotype/voxmarkers
 pip install -e ".[dev]"
 ```
 

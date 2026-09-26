@@ -41,10 +41,10 @@ test = ["pytest>=7.0", "soundfile>=0.12"]
 dev = ["pytest>=7.0", "soundfile>=0.12", "ruff>=0.4", "build>=1.0"]
 
 [project.urls]
-Homepage = "https://github.com/msvidersky/acophenotype"
-Source = "https://github.com/msvidersky/acophenotype/tree/main/acophenotype"
-Issues = "https://github.com/msvidersky/acophenotype/issues"
-Models = "https://huggingface.co/msvidersky/acophenotype-pitt-models"
+Homepage = "https://github.com/tobiasSviderski/acophenotype"
+Source = "https://github.com/tobiasSviderski/acophenotype/tree/main/acophenotype"
+Issues = "https://github.com/tobiasSviderski/acophenotype/issues"
+Models = "https://huggingface.co/sivdma/acophenotype-pitt-models"
 
 [project.scripts]
 acophenotype = "acophenotype.cli:main"

@@ -20,7 +20,7 @@ pip install acophenotype
 
 This installs the whole suite. The pretrained models, VLAD codebook and reference-cohort
 statistics are downloaded automatically from the
-[Hugging Face Hub](https://huggingface.co/msvidersky/acophenotype-pitt-models) the first
+[Hugging Face Hub](https://huggingface.co/sivdma/acophenotype-pitt-models) the first
 time they are needed, then cached.
 
 To use only the interpretable biomarkers (no deep-learning dependencies):
@@ -77,7 +77,7 @@ recording setups or clinical populations. See the model card for details.
 ## Development
 
 ```bash
-git clone https://github.com/msvidersky/acophenotype
+git clone https://github.com/tobiasSviderski/acophenotype
 cd acophenotype
 pip install -e ./voxmarkers -e ./acophen-fusion -e "./acophen-streams[all]" -e ./acophenotype
 pip install pytest soundfile

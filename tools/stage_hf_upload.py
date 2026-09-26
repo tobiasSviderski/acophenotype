@@ -82,7 +82,7 @@ library_name: acophenotype
 
 Frozen models and reference data released with the PhD thesis *[thesis title]*
 (Marek Svidersky, [University], 2026). They are downloaded automatically by the
-[`acophenotype`](https://github.com/msvidersky/acophenotype) Python packages; you do not
+[`acophenotype`](https://github.com/tobiasSviderski/acophenotype) Python packages; you do not
 need to fetch them by hand.
 
 ```bash

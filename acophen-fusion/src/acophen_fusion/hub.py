@@ -16,7 +16,7 @@ import os
 from pathlib import Path
 
 #: Hub repo holding the frozen model bundle. Override with $ACOPHEN_HUB_REPO.
-DEFAULT_REPO_ID = "msvidersky/acophenotype-pitt-models"
+DEFAULT_REPO_ID = "sivdma/acophenotype-pitt-models"
 #: Pin a revision (tag/commit) for reproducibility; None = latest on main.
 DEFAULT_REVISION = None
 #: Prefix inside the repo where the fusion artefacts live.

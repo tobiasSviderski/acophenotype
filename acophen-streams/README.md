@@ -4,7 +4,7 @@
 
 `acophen-streams` provides the three learned streams of the acoustic phenotyping suite,
 each producing a **named, schema-versioned** feature vector that plugs straight into
-[`acophen-fusion`](https://github.com/msvidersky/acophen-fusion):
+[`acophen-fusion`](https://github.com/tobiasSviderski/acophenotype/tree/main/acophen-fusion):
 
 | Stream | Import name | Backbone → pooling | Dim |
 |--------|-------------|--------------------|-----|
