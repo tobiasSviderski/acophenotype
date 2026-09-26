@@ -192,10 +192,9 @@ def main():
         shutil.rmtree(out, ignore_errors=True)
         sys.exit("Missing files, nothing staged:\n  " + "\n  ".join(missing))
 
-    versions = "\n".join(f"- {k}: {_version(m)}" for k, m in [
-        ("python", "platform"), ("scikit-learn", "sklearn"), ("lightgbm", "lightgbm"),
-        ("xgboost", "xgboost"), ("numpy", "numpy")]).replace(
-        "- python: not installed", f"- python: {platform.python_version()}")
+    versions = "\n".join([f"- python: {platform.python_version()}"] + [
+        f"- {k}: {_version(m)}" for k, m in [("scikit-learn", "sklearn"),
+        ("lightgbm", "lightgbm"), ("xgboost", "xgboost"), ("numpy", "numpy")]])
     (out / "README.md").write_text(MODEL_CARD.replace("{versions}", versions), encoding="utf-8")
     (out / "LICENSE").write_text(
         "The model weights and reference files in this repository are licensed under the\n"
