@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
-    { name = "Marek Svidersky" },
+    { name = "Marek Sviderski" },
 ]
 keywords = [
     "speech", "acoustics", "fusion", "dementia", "alzheimer",

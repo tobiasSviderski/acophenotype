@@ -3,6 +3,11 @@
 Follows [Semantic Versioning](https://semver.org/). Stream output schemas carry their
 own version (`SCHEMA_VERSION`) because fusion scoring depends on frozen column order.
 
+## [0.1.1] — 2026-09-26
+
+### Fixed
+- Author name spelling (Sviderski) and project links in the package metadata.
+
 ## [0.1.0] — unreleased
 
 ### Added

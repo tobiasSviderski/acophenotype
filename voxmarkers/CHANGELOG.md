@@ -5,6 +5,11 @@ All notable changes to `voxmarkers` are documented here. This project follows
 independent version (`FEATURE_SCHEMA.version`) because zero-shot scoring depends on a
 frozen column order — see the README.
 
+## [0.1.1] — 2026-09-26
+
+### Fixed
+- Author name spelling (Sviderski) and project links in the package metadata.
+
 ## [0.1.0] — unreleased
 
 ### Added

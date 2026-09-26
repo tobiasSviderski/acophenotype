@@ -79,8 +79,8 @@ library_name: acophenotype
 
 # acophenotype: Pitt-trained models
 
-Frozen models and reference data released with the PhD thesis *[thesis title]*
-(Marek Svidersky, [University], 2026). They are downloaded automatically by the
+Frozen models and reference data released with the PhD thesis *Acoustic Phenotyping in Low-Resource Settings: A Multi-Representational Fusion Framework for Alzheimer's Detection*
+(Marek Sviderski, University of Sunderland, 2026). They are downloaded automatically by the
 [`acophenotype`](https://github.com/tobiasSviderski/acophenotype) Python packages; you do not
 need to fetch them by hand.
 
@@ -203,7 +203,7 @@ def main():
         "They were trained on the Pitt Corpus (DementiaBank, TalkBank), whose data are governed\n"
         "by CC BY-NC-SA 3.0 and the TalkBank Ground Rules "
         "(https://talkbank.org/0share/rules.html).\nNo audio or transcripts are included.\n\n"
-        "Copyright (c) 2026 Marek Svidersky\n", encoding="utf-8")
+        "Copyright (c) 2026 Marek Sviderski\n", encoding="utf-8")
 
     files = [p for p in out.rglob("*") if p.is_file()]
     size = sum(p.stat().st_size for p in files) / 1e6

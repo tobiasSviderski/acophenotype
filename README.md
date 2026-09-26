@@ -3,8 +3,8 @@
 **Multi-representation acoustic phenotyping of spontaneous speech, as installable Python
 packages.**
 
-This repository releases the software developed for the PhD thesis *[thesis title]*
-(Marek Svidersky, [University], 2026). The thesis studies whether the acoustic channel of
+This repository releases the software developed for the PhD thesis *Acoustic Phenotyping in Low-Resource Settings: A Multi-Representational Fusion Framework for Alzheimer's Detection*
+(Marek Sviderski, University of Sunderland, 2026). The thesis studies whether the acoustic channel of
 spontaneous speech, analysed through several complementary representations, carries
 signal relevant to Alzheimer's disease. The packages let others compute the same
 representations on their own recordings and apply the models trained in the thesis.

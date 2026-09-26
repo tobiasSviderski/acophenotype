@@ -9,7 +9,7 @@ description = "Deep acoustic feature streams (SSL embeddings, vision, emotion) f
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "Marek Svidersky" }]
+authors = [{ name = "Marek Sviderski" }]
 keywords = ["speech", "acoustics", "ssl", "whisper", "emotion", "dementia", "embeddings"]
 classifiers = [
     "Development Status :: 4 - Beta",

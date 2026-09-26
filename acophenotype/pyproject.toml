@@ -9,7 +9,7 @@ description = "End-to-end acoustic phenotyping: denoise -> streams -> fuse -> pr
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "Marek Svidersky" }]
+authors = [{ name = "Marek Sviderski" }]
 keywords = ["speech", "acoustics", "dementia", "alzheimer", "digital-biomarkers", "report"]
 classifiers = [
     "Development Status :: 4 - Beta",
