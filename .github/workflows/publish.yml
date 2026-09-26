@@ -1,0 +1,40 @@
+name: Publish to PyPI
+
+# Runs when a GitHub Release is published. Builds all four packages and uploads them to
+# PyPI using Trusted Publishing (no passwords or API tokens stored anywhere).
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build all four packages
+        run: |
+          pip install build
+          for p in voxmarkers acophen-fusion acophen-streams acophenotype; do
+            python -m build "$p" --outdir dist
+          done
+          ls -l dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi          # must match the environment name registered on PyPI
+    permissions:
+      id-token: write          # required for Trusted Publishing
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Generated reports / scratch
+report_output/
+*.html
+!src/**/*.html
+*.wav
+
+# Model weights / references live outside the wheel
+*.pkl
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

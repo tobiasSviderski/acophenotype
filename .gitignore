@@ -1,0 +1,39 @@
+# ---------------------------------------------------------------- internal notes
+# Working documents that stay local and are never published.
+THESIS_FINDINGS.md
+TESTING_AND_RELEASE.md
+RELEASE_STEPS.md
+HUGGINGFACE_UPLOAD.md
+PACKAGE_DESIGN_acoustic_phenotyping.md
+voxmarkers/PUBLISHING.md
+notes/
+
+# ---------------------------------------------------------------- model artefacts
+# Weights, codebooks and reference data are published on the Hugging Face Hub,
+# never committed to git.
+*.pkl
+*.joblib
+*.npz
+*.pt
+*.npy
+hf_upload/
+
+# ---------------------------------------------------------------- python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# ---------------------------------------------------------------- outputs / OS
+*.wav
+report_output/
+phase2c_*.html
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Model weights live OUTSIDE the wheel (Zenodo/HF); never commit them.
+weights/
+models/
+*.pkl
+*.joblib
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

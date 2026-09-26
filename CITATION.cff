@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or the released models, please cite it as below."
+title: "acophenotype: a Python suite for multi-representation acoustic phenotyping of speech"
+abstract: >-
+  Four Python packages released with the PhD thesis: voxmarkers (interpretable acoustic
+  biomarkers), acophen-streams (SSL, vision and emotion representations), acophen-fusion
+  (frozen fusion models trained on the Pitt Corpus) and acophenotype (end-to-end profile
+  and HTML report). Pretrained models are distributed via the Hugging Face Hub.
+  Research use only; not a medical device.
+type: software
+authors:
+  - family-names: Svidersky
+    given-names: Marek
+version: 0.1.0
+license: MIT
+keywords:
+  - speech
+  - acoustic biomarkers
+  - dementia
+  - Alzheimer's disease
+  - multimodal fusion
+repository-code: "https://github.com/msvidersky/acophenotype"
+# doi: 10.5281/zenodo.XXXXXXX   # added after the first GitHub release is archived by Zenodo

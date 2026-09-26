@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "acophen-streams"
+dynamic = ["version"]
+description = "Deep acoustic feature streams (SSL embeddings, vision, emotion) for acoustic phenotyping"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Marek Svidersky" }]
+keywords = ["speech", "acoustics", "ssl", "whisper", "emotion", "dementia", "embeddings"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+# Light core: registry + schemas + pooling work without torch.
+dependencies = [
+    "numpy>=1.21",
+    "pandas>=1.3",
+    "scipy>=1.7",
+    # The VLAD codebook was pickled with scikit-learn 1.7.2. Cluster assignment is now
+    # computed directly from its centroids, but unpickling still needs a compatible sklearn.
+    "scikit-learn>=1.7.2,<1.8",
+    "librosa>=0.10",
+    "joblib>=1.1",
+    "huggingface_hub>=0.30",   # automatic VLAD-codebook download on first use
+]
+
+[project.optional-dependencies]
+# transformers is capped below 5: the WavLM emotion model (3loi/SER-Odyssey-...) ships
+# remote code that imports `PretrainedConfig` from `transformers.modeling_utils`, which
+# transformers 5.x removed.
+ssl = ["torch>=1.13", "transformers>=4.30,<5"]
+vision = ["torch>=1.13", "torchvision>=0.14"]
+emotion = ["torch>=1.13", "torchaudio>=0.13", "transformers>=4.30,<5"]
+all = [
+    "torch>=1.13", "torchvision>=0.14", "torchaudio>=0.13", "transformers>=4.30,<5",
+]
+test = ["pytest>=7.0"]
+dev = ["pytest>=7.0", "ruff>=0.4", "build>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/msvidersky/acophenotype"
+Source = "https://github.com/msvidersky/acophenotype/tree/main/acophen-streams"
+Issues = "https://github.com/msvidersky/acophenotype/issues"
+Models = "https://huggingface.co/msvidersky/acophenotype-pitt-models"
+
+[project.scripts]
+acophen-streams = "acophen_streams.cli:main"
+
+[tool.hatch.version]
+path = "src/acophen_streams/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/acophen_streams"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

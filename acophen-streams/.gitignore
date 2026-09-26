@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Model weights / codebooks live outside the wheel
+*.pkl
+*.pt
+*.npy
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

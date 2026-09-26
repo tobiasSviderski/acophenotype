@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "acophenotype"
+dynamic = ["version"]
+description = "End-to-end acoustic phenotyping: denoise -> streams -> fuse -> profile & HTML report"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Marek Svidersky" }]
+keywords = ["speech", "acoustics", "dementia", "alzheimer", "digital-biomarkers", "report"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+# `pip install acophenotype` installs the WHOLE suite and everything needed to run the
+# full pipeline. Model weights, the VLAD codebook and the reference cohort are downloaded
+# automatically on first use (huggingface_hub), so there is nothing else for a user to do.
+dependencies = [
+    "numpy>=1.21",
+    "pandas>=1.3",
+    "voxmarkers>=0.1",
+    "acophen-fusion>=0.1",
+    "acophen-streams[all]>=0.1",   # [all] pulls the deep backbones (torch etc.)
+    "huggingface_hub>=0.30",
+    "pyarrow>=10",                 # parquet I/O for `acophenotype build-reference`
+]
+# Note: umap-learn is NOT required. The position plot uses umap_reference.npz (plain arrays)
+# because the pickled UMAP projector embeds numba bytecode tied to one Python version.
+
+[project.optional-dependencies]
+# Genuinely optional add-ons only.
+denoise = ["speechbrain>=0.5"]   # MetricGAN+ speech enhancement
+report = ["matplotlib>=3.5"]     # embedded log-mel spectrogram in the report
+test = ["pytest>=7.0", "soundfile>=0.12"]
+dev = ["pytest>=7.0", "soundfile>=0.12", "ruff>=0.4", "build>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/msvidersky/acophenotype"
+Source = "https://github.com/msvidersky/acophenotype/tree/main/acophenotype"
+Issues = "https://github.com/msvidersky/acophenotype/issues"
+Models = "https://huggingface.co/msvidersky/acophenotype-pitt-models"
+
+[project.scripts]
+acophenotype = "acophenotype.cli:main"
+
+[tool.hatch.version]
+path = "src/acophenotype/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/acophenotype"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
