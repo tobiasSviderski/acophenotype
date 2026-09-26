@@ -91,5 +91,7 @@ If you use this software or the models, please cite the thesis and this reposito
 
 ## License
 
-MIT for the code. Pretrained backbones (Whisper, ResNet50, WavLM) and the released models
-are subject to their own licences and to the terms of the training data.
+- **Code:** MIT.
+- **Released models and reference files** (Hugging Face): CC BY-NC-SA 4.0, consistent with
+  the DementiaBank terms for the training data. No audio or transcripts are distributed.
+- **Pretrained backbones** (Whisper, ResNet50, WavLM) keep their own licences.

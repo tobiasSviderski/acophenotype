@@ -67,8 +67,7 @@ def _version(mod):
 
 
 MODEL_CARD = """---
-license: other
-license_name: research-use-dementiabank
+license: cc-by-nc-sa-4.0
 tags:
   - speech
   - audio
@@ -117,6 +116,13 @@ profile = AcousticProfile.from_audio("recording.wav", task="binary")
 | `reference/*.json`, `umap_reference.npz` | Control-cohort statistics and UMAP layout for the report |
 
 Each model has `stream_only` and `with_demos` (sex, age, education) variants.
+
+## Licence
+
+The models and reference files are released under **CC BY-NC-SA 4.0**
+(attribution, non-commercial, share-alike), consistent with the CC BY-NC-SA 3.0 terms
+governing the DementiaBank data they were trained on. They contain no audio or
+transcripts. The accompanying software is MIT-licensed.
 
 ## Training data
 
@@ -190,6 +196,14 @@ def main():
         ("xgboost", "xgboost"), ("numpy", "numpy")]).replace(
         "- python: not installed", f"- python: {platform.python_version()}")
     (out / "README.md").write_text(MODEL_CARD.replace("{versions}", versions), encoding="utf-8")
+    (out / "LICENSE").write_text(
+        "The model weights and reference files in this repository are licensed under the\n"
+        "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License\n"
+        "(CC BY-NC-SA 4.0): https://creativecommons.org/licenses/by-nc-sa/4.0/\n\n"
+        "They were trained on the Pitt Corpus (DementiaBank, TalkBank), whose data are governed\n"
+        "by CC BY-NC-SA 3.0 and the TalkBank Ground Rules "
+        "(https://talkbank.org/0share/rules.html).\nNo audio or transcripts are included.\n\n"
+        "Copyright (c) 2026 Marek Svidersky\n", encoding="utf-8")
 
     files = [p for p in out.rglob("*") if p.is_file()]
     size = sum(p.stat().st_size for p in files) / 1e6
